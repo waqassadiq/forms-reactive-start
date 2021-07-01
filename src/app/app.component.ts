@@ -13,9 +13,12 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
-      // Validators.required() don't execute it, just give the reference as below
-      'username': new FormControl(null, Validators.required),
-      'email': new FormControl(null, [Validators.required, Validators.email]),
+
+      'userData': new FormGroup({
+        // Validators.required() don't execute it, just give the reference as below
+        'username': new FormControl(null, Validators.required),
+        'email': new FormControl(null, [Validators.required, Validators.email]),
+      }),
       'gender': new FormControl('male')
     });
   }
