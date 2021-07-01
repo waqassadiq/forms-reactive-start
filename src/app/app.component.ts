@@ -9,10 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms'
 export class AppComponent implements OnInit{
 
   genders = ['male', 'female'];
-  signUpForm: FormGroup;
+  signupForm: FormGroup;
 
   ngOnInit(): void {
-    this.signUpForm = new FormGroup({
+    this.signupForm = new FormGroup({
       'username': new FormControl(null),
       'email': new FormControl(null),
       'gender': new FormControl('male')
